@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+@keyframes fadeIn{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1
+  }
+}
+
+.hero{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:40px;
+  box-shadow: 10px 10px 10px #9b7a41
+}
+.hero-img{
+  max-width:100%;
+  height:270px;;
+}
+@media (min-width: 1000px){
+  .hero-img{
+    height:500px;
+    width:100%;
+    background-position: center;  }
+}
+.hero-buttons{
+ display:flex;
+  flex-direction:column;
+  align-items:center;
+  position:absolute;
+  top:65%;
+  left:4%;
+
+  button{
+    cursor:pointer;
+  }
+}
+
+.hero-call-button{
+  background-color:#a98c23;
+  color:white;
+  border:none;
+  width:80px;
+  padding:8px;
+  border-radius:10px;
+  opacity:1;
+  animation:comeUp 1s ease-in-out;
+  font-size:12px
+}
+
+.hero-browse-button{
+  background-color:orange;
+  color:white;
+  border:none;
+  width:100px;
+  padding:8px;
+  margin-left:10px;
+  border-radius:10px;
+  margin:10px;
+  animation:comeUp 1s ease-in-out;
+  font-size:12px;
+}
+
+.hero-buttons button:hover{
+  opacity:0.8;
+  transition:0.3s ease-in-out;
+  
+}
+.hero-call-button:active,
+.hero-browse-button:active {
+  opacity: 0.6;
+  background-color: black;
+  
+}
+
+@keyframes comeUp{
+  0%{
+    opacity:0;
+    transform:translateY(100px);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes comeDown{
+  0%{
+    opacity:1;
+    transform:translateY(0);
+  }
+  100%{
+    opacity:0;
+    transform:translateY(100px);
+  }
+}
+.sub-hero{
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 10px;
+  padding: 10px;
+  scroll-snap-type: x mandatory; 
+
+}
+
+
+ 
+
+
+.first-sub-hero-img,
+.second-sub-hero-img,
+.third-sub-hero-img
+{
+  border-radius:40px;
+ 
+}
+..first-sub-hero-img-container,
+.second-sub-hero-img-container,
+.third-sub-hero-img-container{
+  width:300px;
+  box-shadow: 10px 10px 10px #000000;
+}
+
+.first-sub-hero-img-container,
+.second-sub-hero-img-container,
+.third-sub-hero-img-container {
+  flex-shrink: 0; /* ✅ Prevent shrinking */
+  height:200px
+}

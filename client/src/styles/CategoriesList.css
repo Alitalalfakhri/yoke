@@ -1,0 +1,145 @@
+/*.img-small,
+.img-large {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: none;
+}
+
+.category {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.category:hover {
+  border: 1px solid #fea500;
+  border-radius: 40px;
+  transition: 0.5s ease-in-out;
+}
+
+.category img:active {
+  filter: brightness(0.4);
+}
+
+.category img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 999px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .category {
+    width: 170px;
+    margin: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+  }
+
+  .img-small {
+    display: block;
+  }
+
+  .img-large {
+    display: none;
+  }
+
+  .title {
+    font-size: 14px;
+    color: #fea500;
+    height: 10px;
+    line-height: 25px;
+    margin-top: 0px;
+    text-align: center;
+    display: block;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .category {
+    width: 300px;
+    margin: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+  }
+
+  .img-small {
+    display: none;
+  }
+
+  .img-large {
+    display: block;
+  }
+
+  .title {
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fea500;
+    height: 20px;
+    line-height: -25px;
+    text-align: center;
+    display: block;
+  }
+}
+
+*/
+
+.categories-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the left */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent wrapping */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 10px; /* Optional: adds a little space at the bottom */
+}
+
+.category {
+  background-color: tomato;
+  border-radius: 10px;
+  height: 140px;  /* Fixed height */
+  width: 290px;   /* Fixed width */
+  flex-shrink: 0;  /* Prevent shrinking */
+  margin: 10px;    /* Space between items */
+  border-radius:20px;
+
+  cursor:pointer;
+}
+.category{
+  img{
+    border-radius:20px;
+    height:150px;
+    width:290px;
+    cursor:pointer;
+    transition: 0.3s ease-in-out
+  }
+}
+
+.category img:hover{
+    filter: brightness(0.8);
+  height:160px;
+  width:300px;
+
+  
+}
